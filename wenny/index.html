@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wenny's Fast Food & Restaurant | Delicious Moments</title>
+
+    <meta name="description" content="Welcome to Wenny's Fast Food & Restaurant. Discover delicious meals, fresh food and an amazing dining experience.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                WENNY'S<span>.</span>
+                <small>FAST FOOD & RESTAURANT</small>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="menu.html">Our Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="order.html" class="nav-order">Order Now ↗</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+
+            <span class="hero-tag">
+                GOOD FOOD. GOOD MOOD.
+            </span>
+
+            <h1>
+                Delicious Moments,<br>
+                <span>Made Fresh.</span>
+            </h1>
+
+            <p>
+                Experience the taste of happiness at Wenny's.
+                Freshly prepared meals, amazing flavours and
+                unforgettable moments.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn-primary">
+                    Explore Our Menu →
+                </a>
+
+                <a href="about.html" class="btn-outline">
+                    Discover Wenny's
+                </a>
+            </div>
+
+            <div class="hero-note">
+                <span>✦</span> Freshly prepared · Quality ingredients · Great taste
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="intro-section">
+
+        <div class="container intro-content">
+
+            <span class="section-label">WELCOME TO WENNY'S</span>
+
+            <h2>
+                Good Food Brings<br>
+                <span>People Together.</span>
+            </h2>
+
+            <p>
+                At Wenny's Fast Food & Restaurant, we believe
+                every meal should be an experience worth remembering.
+                From satisfying favourites to delicious specialities,
+                there's something for everyone.
+            </p>
+
+            <a href="about.html" class="text-link">
+                Learn More About Us →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- POPULAR MEALS -->
+    <section class="popular-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">A TASTE OF HAPPINESS</span>
+                    <h2>Customer <span>Favourites</span></h2>
+                </div>
+
+                <a href="menu.html" class="text-link">
+                    View Full Menu →
+                </a>
+            </div>
+
+
+            <div class="food-grid">
+
+                <article class="food-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=700&auto=format&fit=crop&q=85"
+                        alt="Delicious rice meal"
+                        loading="lazy"
+                    >
+
+                    <div class="food-info">
+                        <span class="food-category">RICE SPECIAL</span>
+                        <h3>Special Jollof Rice</h3>
+                        <p>A delicious and satisfying rice experience.</p>
+                        <a href="menu.html">Explore meal →</a>
+                    </div>
+                </article>
+
+
+                <article class="food-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&auto=format&fit=crop&q=85"
+                        alt="Freshly prepared beef burger"
+                        loading="lazy"
+                    >
+
+                    <div class="food-info">
+                        <span class="food-category">FAST FOOD</span>
+                        <h3>Classic Beef Burger</h3>
+                        <p>Juicy, flavourful and made to satisfy.</p>
+                        <a href="menu.html">Explore meal →</a>
+                    </div>
+                </article>
+
+
+                <article class="food-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=700&auto=format&fit=crop&q=85"
+                        alt="Crispy fried chicken"
+                        loading="lazy"
+                    >
+
+                    <div class="food-info">
+                        <span class="food-category">CHICKEN SPECIAL</span>
+                        <h3>Crispy Fried Chicken</h3>
+                        <p>Golden, crispy and full of flavour.</p>
+                        <a href="menu.html">Explore meal →</a>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-section">
+
+        <div class="container">
+
+            <div class="why-heading">
+                <span class="section-label">THE WENNY'S EXPERIENCE</span>
+                <h2>Why You'll Love <span>Us</span></h2>
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <div class="feature-icon">✦</div>
+                    <h3>Freshly Prepared</h3>
+                    <p>Meals prepared with care and attention to quality.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">♡</div>
+                    <h3>Made With Care</h3>
+                    <p>We put passion into every meal we serve.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">★</div>
+                    <h3>Great Experience</h3>
+                    <p>Enjoy delicious food in a welcoming atmosphere.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+    <section class="cta-section">
+
+        <div class="container cta-content">
+
+            <span>YOUR NEXT DELICIOUS MEAL AWAITS</span>
+
+            <h2>Ready for Something<br>Delicious?</h2>
+
+            <p>
+                Explore our menu and find your next favourite meal.
+            </p>
+
+            <a href="order.html" class="btn-primary">
+                Start Your Order →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    WENNY'S<span>.</span>
+                    <small>FAST FOOD & RESTAURANT</small>
+                </a>
+
+                <p>
+                    Delicious food, wonderful moments
+                    and a taste worth remembering.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Our Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Ordering</h3>
+                <a href="order.html">Place an Order</a>
+                <a href="menu.html">Explore Meals</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Wenny's Fast Food & Restaurant. All rights reserved.</p>
+            <p>Designed by Zara Codes.</p>
+        </div>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

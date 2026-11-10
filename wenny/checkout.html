@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | WENNY'S FAST FOOD</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'DM Sans', sans-serif;
+            background: #fffaf3;
+            color: #252525;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .checkout-hero {
+            background: #252525;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .checkout-hero h1 {
+            font-size: clamp(35px, 5vw, 55px);
+        }
+
+        .checkout-hero span {
+            color: #ff8a24;
+        }
+
+        .checkout-container {
+            max-width: 1050px;
+            margin: auto;
+            padding: 55px 20px;
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .checkout-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 25px rgba(0,0,0,.06);
+        }
+
+        .checkout-card h2 {
+            font-size: 26px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 9px;
+            outline: none;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ff8a24;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .place-order-btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 30px;
+            background: #ff8a24;
+            color: white;
+            font-weight: 800;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 25px;
+        }
+
+        .place-order-btn:hover {
+            background: #252525;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #ed7918;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 35px 15px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        footer {
+            background: #171717;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        @media(max-width: 750px) {
+            .checkout-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold">
+                WENNY'S<span class="text-orange-500">.</span>
+            </a>
+
+            <div class="flex gap-5 items-center text-sm font-bold">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="order.html">My Order</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="checkout-hero">
+        <p class="text-orange-400 font-bold uppercase tracking-widest mb-3">
+            Almost there!
+        </p>
+
+        <h1>Complete Your <span>Order</span></h1>
+
+        <p class="text-gray-300 mt-3">
+            Provide your details so we can prepare your order.
+        </p>
+    </section>
+
+    <!-- CHECKOUT -->
+    <main class="checkout-container">
+
+        <!-- CUSTOMER DETAILS -->
+        <section class="checkout-card">
+            <h2>Delivery Information</h2>
+
+            <form id="checkout-form">
+
+                <div class="form-group">
+                    <label for="customer-name">Full Name *</label>
+                    <input
+                        type="text"
+                        id="customer-name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="customer-phone">Phone Number *</label>
+                    <input
+                        type="tel"
+                        id="customer-phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="customer-address">Delivery Address *</label>
+                    <textarea
+                        id="customer-address"
+                        placeholder="Enter your complete delivery address"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="customer-note">Additional Instructions</label>
+                    <textarea
+                        id="customer-note"
+                        placeholder="Any special instructions? (Optional)"
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="place-order-btn">
+                    Place Order on WhatsApp
+                </button>
+
+            </form>
+
+            <a href="order.html" class="back-link">
+                ← Back to My Order
+            </a>
+        </section>
+
+        <!-- ORDER SUMMARY -->
+        <section class="checkout-card">
+            <h2>Your Order Summary</h2>
+
+            <div id="checkout-items"></div>
+
+            <div id="checkout-total-section">
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="checkout-total">₦0</span>
+                </div>
+            </div>
+
+            <p class="text-gray-500 text-xs mt-5">
+                Delivery charges and payment arrangements will be confirmed by the restaurant.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="font-bold text-xl">WENNY'S FAST FOOD</p>
+        <p class="text-gray-400 text-sm mt-2">
+            Delicious meals. Wonderful moments.
+        </p>
+        <p class="text-gray-500 text-xs mt-4">
+            © <span id="year"></span> WENNY'S. All rights reserved.
+        </p>
+    </footer>
+
+    <script>
+        const WHATSAPP_NUMBER = "2348156949388";
+
+        let cart = [];
+
+        try {
+            cart = JSON.parse(localStorage.getItem("wennyCart")) || [];
+            if (!Array.isArray(cart)) cart = [];
+        } catch (error) {
+            cart = [];
+        }
+
+        const checkoutItems = document.getElementById("checkout-items");
+        const checkoutTotal = document.getElementById("checkout-total");
+        const form = document.getElementById("checkout-form");
+
+        function formatPrice(amount) {
+            return "₦" + Number(amount).toLocaleString("en-NG");
+        }
+
+        function displayCheckout() {
+
+            checkoutItems.innerHTML = "";
+
+            if (cart.length === 0) {
+                checkoutItems.innerHTML = `
+                    <div class="empty-message">
+                        <p class="text-3xl mb-3">🛒</p>
+                        <h3 class="font-bold text-xl">Your cart is empty</h3>
+                        <p class="text-gray-500 mt-2">
+                            Add meals before proceeding to checkout.
+                        </p>
+                        <a href="menu.html" class="back-link">
+                            Explore Menu
+                        </a>
+                    </div>
+                `;
+
+                checkoutTotal.textContent = "₦0";
+                form.querySelector("button").disabled = true;
+                form.querySelector("button").style.opacity = "0.5";
+                return;
+            }
+
+            let total = 0;
+
+            cart.forEach(item => {
+
+                const price = Number(item.price) || 0;
+                const quantity = Math.max(1, Number(item.quantity) || 1);
+                const itemTotal = price * quantity;
+
+                total += itemTotal;
+
+                const row = document.createElement("div");
+                row.className = "summary-item";
+
+                const name = document.createElement("span");
+                name.textContent = `${item.name} × ${quantity}`;
+
+                const amount = document.createElement("strong");
+                amount.textContent = formatPrice(itemTotal);
+
+                row.append(name, amount);
+                checkoutItems.appendChild(row);
+            });
+
+            checkoutTotal.textContent = formatPrice(total);
+        }
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            if (cart.length === 0) {
+                alert("Your cart is empty. Please add meals first.");
+                return;
+            }
+
+            const name = document.getElementById("customer-name").value.trim();
+            const phone = document.getElementById("customer-phone").value.trim();
+            const address = document.getElementById("customer-address").value.trim();
+            const note = document.getElementById("customer-note").value.trim();
+
+            if (!name || !phone || !address) {
+                alert("Please complete all required fields.");
+                return;
+            }
+
+            let total = 0;
+            let orderDetails = "";
+
+            cart.forEach(item => {
+                const price = Number(item.price) || 0;
+                const quantity = Math.max(1, Number(item.quantity) || 1);
+                const itemTotal = price * quantity;
+
+                total += itemTotal;
+
+                orderDetails +=
+                    `• ${item.name} x ${quantity} - ${formatPrice(itemTotal)}\n`;
+            });
+
+            const message = `
+HELLO WENNY'S FAST FOOD!
+
+I would like to place an order.
+
+CUSTOMER DETAILS
+Name: ${name}
+Phone: ${phone}
+Delivery Address: ${address}
+
+ORDER DETAILS
+${orderDetails}
+TOTAL: ${formatPrice(total)}
+
+Additional Instructions:
+${note || "None"}
+
+Please confirm my order and delivery arrangements. Thank you!
+`;
+
+            const whatsappURL =
+                "https://wa.me/" + WHATSAPP_NUMBER +
+                "?text=" + encodeURIComponent(message);
+
+            window.open(whatsappURL, "_blank");
+        });
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        displayCheckout();
+    </script>
+
+</body>
+</html>

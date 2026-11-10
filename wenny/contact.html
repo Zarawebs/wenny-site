@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | WENNY'S FAST FOOD & RESTAURANT</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #fffaf3;
+            color: #252525;
+        }
+
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .orange-text { color: #f47721; }
+        .orange-bg { background: #f47721; }
+
+        .contact-hero {
+            background: linear-gradient(90deg, rgba(20,17,14,.88), rgba(20,17,14,.35)),
+            url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=85');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .contact-card {
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.08);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e5e0d9;
+            border-radius: 12px;
+            background: white;
+            outline: none;
+            transition: border .3s;
+        }
+
+        .form-input:focus {
+            border-color: #f47721;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold">
+                WENNY'S<span class="orange-text">.</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-semibold text-sm">
+                <a href="index.html" class="hover:text-orange-500">Home</a>
+                <a href="menu.html" class="hover:text-orange-500">Menu</a>
+                <a href="about.html" class="hover:text-orange-500">About Us</a>
+                <a href="contact.html" class="orange-text">Contact</a>
+                <a href="order.html" class="orange-bg text-white px-6 py-3 rounded-full">
+                    Order Now
+                </a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden text-2xl" aria-label="Open navigation">
+                ☰
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-5 bg-white">
+            <a href="index.html" class="block py-3">Home</a>
+            <a href="menu.html" class="block py-3">Menu</a>
+            <a href="about.html" class="block py-3">About Us</a>
+            <a href="contact.html" class="block py-3 orange-text">Contact</a>
+            <a href="order.html" class="block py-3 font-bold orange-text">Order Now</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="contact-hero min-h-[380px] flex items-center">
+        <div class="max-w-7xl mx-auto px-6 py-24 w-full">
+            <p class="text-orange-400 uppercase tracking-widest font-bold mb-4">
+                Get in touch
+            </p>
+
+            <h1 class="heading-font text-white text-5xl md:text-7xl font-bold">
+                We'd Love to Hear From You.
+            </h1>
+
+            <p class="text-gray-200 text-lg mt-6 max-w-xl">
+                Have a question or want to place an order? We're just a message away.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT DETAILS -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center mb-14">
+                <p class="orange-text uppercase tracking-widest font-bold mb-3">
+                    Contact Information
+                </p>
+
+                <h2 class="heading-font text-4xl md:text-5xl font-bold">
+                    Let's Connect
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-7">
+
+                <div class="contact-card bg-white p-9 rounded-3xl shadow-sm text-center">
+                    <div class="text-4xl mb-5">📱</div>
+                    <h3 class="font-bold text-xl mb-3">WhatsApp</h3>
+                    <p class="text-gray-500 mb-5">
+                        Chat with us about meals and orders.
+                    </p>
+
+                    <a href="https://wa.me/2348156949388"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="orange-text font-bold">
+                        08156949388
+                    </a>
+                </div>
+
+                <div class="contact-card bg-white p-9 rounded-3xl shadow-sm text-center">
+                    <div class="text-4xl mb-5">📍</div>
+                    <h3 class="font-bold text-xl mb-3">Our Location</h3>
+                    <p class="text-gray-500">
+                        Visit us at our restaurant.
+                    </p>
+                    <p class="orange-text font-bold mt-5">
+                        Location to be confirmed
+                    </p>
+                </div>
+
+                <div class="contact-card bg-white p-9 rounded-3xl shadow-sm text-center">
+                    <div class="text-4xl mb-5">🕒</div>
+                    <h3 class="font-bold text-xl mb-3">Opening Hours</h3>
+                    <p class="text-gray-500 mb-3">
+                        Our opening schedule:
+                    </p>
+                    <p class="orange-text font-bold">
+                        Hours to be confirmed
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MESSAGE SECTION -->
+    <section class="pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+
+            <div>
+                <p class="orange-text uppercase tracking-widest font-bold mb-3">
+                    Send us a message
+                </p>
+
+                <h2 class="heading-font text-4xl md:text-5xl font-bold mb-6">
+                    Have Something to Ask?
+                </h2>
+
+                <p class="text-gray-600 leading-8 mb-8">
+                    Whether you have questions about our menu, need help with an
+                    order or want to make an enquiry, send us a message on WhatsApp.
+                    We'd be happy to hear from you.
+                </p>
+
+                <a href="https://wa.me/2348156949388?text=Hello%20WENNY'S%20FAST%20FOOD%20%26%20RESTAURANT.%20I%20would%20like%20to%20make%20an%20enquiry."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-block orange-bg text-white px-9 py-4 rounded-full font-bold hover:opacity-90">
+                    Chat With Us on WhatsApp
+                </a>
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-sm">
+
+                <h3 class="heading-font text-3xl font-bold mb-7">
+                    Send an Enquiry
+                </h3>
+
+                <form id="contact-form" class="space-y-5">
+
+                    <div>
+                        <label class="block font-semibold mb-2">Your Name</label>
+                        <input type="text" id="customer-name"
+                               class="form-input"
+                               placeholder="Enter your full name" required>
+                    </div>
+
+                    <div>
+                        <label class="block font-semibold mb-2">Phone Number</label>
+                        <input type="tel" id="customer-phone"
+                               class="form-input"
+                               placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div>
+                        <label class="block font-semibold mb-2">Subject</label>
+                        <input type="text" id="message-subject"
+                               class="form-input"
+                               placeholder="What is your enquiry about?" required>
+                    </div>
+
+                    <div>
+                        <label class="block font-semibold mb-2">Your Message</label>
+                        <textarea id="customer-message"
+                                  class="form-input"
+                                  rows="5"
+                                  placeholder="Write your message here..."
+                                  required></textarea>
+                    </div>
+
+                    <button type="submit"
+                            class="orange-bg text-white w-full py-4 rounded-xl font-bold hover:opacity-90">
+                        Send Message on WhatsApp
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="orange-bg py-16 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="heading-font text-white text-4xl md:text-5xl font-bold mb-5">
+                Hungry? Let's Fix That.
+            </h2>
+
+            <p class="text-white/90 mb-8">
+                Explore our menu and discover something delicious.
+            </p>
+
+            <a href="menu.html"
+               class="inline-block bg-white text-[#f47721] px-9 py-4 rounded-full font-bold">
+                View Our Menu
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#201d1a] text-white py-10 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6">
+
+            <div>
+                <h2 class="text-2xl font-extrabold">
+                    WENNY'S<span class="orange-text">.</span>
+                </h2>
+                <p class="text-gray-400 mt-3">
+                    Good food. Great moments.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap gap-6 text-gray-300">
+                <a href="index.html" class="hover:text-orange-400">Home</a>
+                <a href="menu.html" class="hover:text-orange-400">Menu</a>
+                <a href="about.html" class="hover:text-orange-400">About</a>
+                <a href="contact.html" class="hover:text-orange-400">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-sm">
+            © <span id="year"></span> WENNY'S FAST FOOD & RESTAURANT. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('customer-name').value.trim();
+            const phone = document.getElementById('customer-phone').value.trim();
+            const subject = document.getElementById('message-subject').value.trim();
+            const message = document.getElementById('customer-message').value.trim();
+
+            if (!name || !phone || !subject || !message) {
+                alert('Please fill in all the fields.');
+                return;
+            }
+
+            const whatsappMessage =
+                "Hello WENNY'S FAST FOOD & RESTAURANT!\n\n" +
+                "Name: " + name + "\n" +
+                "Phone: " + phone + "\n" +
+                "Subject: " + subject + "\n\n" +
+                "Message: " + message;
+
+            const whatsappURL =
+                "https://wa.me/2348156949388?text=" +
+                encodeURIComponent(whatsappMessage);
+
+            window.location.href = whatsappURL;
+        });
+    </script>
+
+</body>
+</html>

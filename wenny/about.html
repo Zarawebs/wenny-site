@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | WENNY'S FAST FOOD & RESTAURANT</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #fffaf3;
+            color: #252525;
+        }
+
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .about-hero {
+            background: linear-gradient(90deg, rgba(25,20,15,.85), rgba(25,20,15,.25)),
+            url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=85');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .orange-text {
+            color: #f47721;
+        }
+
+        .orange-bg {
+            background: #f47721;
+        }
+
+        .about-card {
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.08);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight">
+                WENNY'S<span class="orange-text">.</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-semibold text-sm">
+                <a href="index.html" class="hover:text-orange-500">Home</a>
+                <a href="menu.html" class="hover:text-orange-500">Menu</a>
+                <a href="about.html" class="orange-text">About Us</a>
+                <a href="contact.html" class="hover:text-orange-500">Contact</a>
+                <a href="order.html" class="orange-bg text-white px-6 py-3 rounded-full hover:opacity-90">
+                    Order Now
+                </a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden text-2xl" aria-label="Open navigation">
+                ☰
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-5 bg-white">
+            <a href="index.html" class="block py-3">Home</a>
+            <a href="menu.html" class="block py-3">Menu</a>
+            <a href="about.html" class="block py-3 orange-text">About Us</a>
+            <a href="contact.html" class="block py-3">Contact</a>
+            <a href="order.html" class="block py-3 font-bold orange-text">Order Now</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="about-hero min-h-[420px] flex items-center">
+        <div class="max-w-7xl mx-auto px-6 py-24 w-full">
+            <p class="text-orange-400 font-bold uppercase tracking-widest mb-4">
+                Get to know us
+            </p>
+
+            <h1 class="heading-font text-white text-5xl md:text-7xl font-bold max-w-2xl leading-tight">
+                More Than Food, It's an Experience.
+            </h1>
+
+            <p class="text-gray-200 mt-6 text-lg max-w-xl">
+                Discover the passion and flavour behind WENNY'S FAST FOOD & RESTAURANT.
+            </p>
+        </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+
+            <div>
+                <p class="orange-text font-bold uppercase tracking-widest mb-3">
+                    Our Story
+                </p>
+
+                <h2 class="heading-font text-4xl md:text-5xl font-bold mb-6">
+                    Good Food Brings People Together.
+                </h2>
+
+                <p class="text-gray-600 leading-8 mb-5">
+                    At WENNY'S FAST FOOD & RESTAURANT, we believe that great food
+                    makes every moment more enjoyable. Our goal is to offer delicious
+                    meals in a welcoming and enjoyable atmosphere.
+                </p>
+
+                <p class="text-gray-600 leading-8">
+                    From satisfying rice dishes to tasty chicken, burgers and refreshing
+                    drinks, we want every customer to enjoy a meal worth coming back for.
+                </p>
+
+                <a href="menu.html"
+                   class="inline-block orange-bg text-white px-8 py-4 rounded-full font-bold mt-8 hover:opacity-90">
+                    Explore Our Menu
+                </a>
+            </div>
+
+            <div>
+                <img
+                    src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=85"
+                    alt="Restaurant dining experience"
+                    class="rounded-3xl shadow-xl w-full h-[430px] object-cover">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MISSION AND VISION -->
+    <section class="py-20 bg-white px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center mb-14">
+                <p class="orange-text font-bold uppercase tracking-widest mb-3">
+                    What Drives Us
+                </p>
+
+                <h2 class="heading-font text-4xl md:text-5xl font-bold">
+                    Our Mission & Vision
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <div class="about-card bg-[#fff8ee] p-10 rounded-3xl">
+                    <div class="text-4xl mb-5">🎯</div>
+
+                    <h3 class="heading-font text-3xl font-bold mb-4">
+                        Our Mission
+                    </h3>
+
+                    <p class="text-gray-600 leading-8">
+                        To serve enjoyable and satisfying meals while giving our
+                        customers friendly service and a pleasant food experience.
+                    </p>
+                </div>
+
+                <div class="about-card bg-[#fff8ee] p-10 rounded-3xl">
+                    <div class="text-4xl mb-5">🌟</div>
+
+                    <h3 class="heading-font text-3xl font-bold mb-4">
+                        Our Vision
+                    </h3>
+
+                    <p class="text-gray-600 leading-8">
+                        To become a trusted food destination known for delicious
+                        meals, welcoming service and memorable customer experiences.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center mb-14">
+                <p class="orange-text font-bold uppercase tracking-widest mb-3">
+                    Why WENNY'S?
+                </p>
+
+                <h2 class="heading-font text-4xl md:text-5xl font-bold">
+                    Why Customers Choose Us
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+
+                <div class="about-card bg-white p-8 rounded-3xl shadow-sm text-center">
+                    <div class="text-4xl mb-5">🍽️</div>
+                    <h3 class="font-bold text-xl mb-3">Tasty Meals</h3>
+                    <p class="text-gray-500 leading-7">
+                        Enjoy a variety of delicious meals for different cravings.
+                    </p>
+                </div>
+
+                <div class="about-card bg-white p-8 rounded-3xl shadow-sm text-center">
+                    <div class="text-4xl mb-5">❤️</div>
+                    <h3 class="font-bold text-xl mb-3">Made with Care</h3>
+                    <p class="text-gray-500 leading-7">
+                        We want every meal to give you an enjoyable experience.
+                    </p>
+                </div>
+
+                <div class="about-card bg-white p-8 rounded-3xl shadow-sm text-center">
+                    <div class="text-4xl mb-5">🤝</div>
+                    <h3 class="font-bold text-xl mb-3">Friendly Service</h3>
+                    <p class="text-gray-500 leading-7">
+                        We value our customers and their satisfaction.
+                    </p>
+                </div>
+
+                <div class="about-card bg-white p-8 rounded-3xl shadow-sm text-center">
+                    <div class="text-4xl mb-5">🥤</div>
+                    <h3 class="font-bold text-xl mb-3">Great Variety</h3>
+                    <p class="text-gray-500 leading-7">
+                        Find meals, snacks and drinks to suit your appetite.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="orange-bg py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+
+            <h2 class="heading-font text-white text-4xl md:text-5xl font-bold mb-6">
+                Your Next Favourite Meal Is Waiting.
+            </h2>
+
+            <p class="text-white/90 text-lg mb-9">
+                Explore our menu and place your order today.
+            </p>
+
+            <a href="menu.html"
+               class="inline-block bg-white text-[#f47721] px-9 py-4 rounded-full font-bold hover:bg-gray-100">
+                Order Your Favourite Meal
+            </a>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#201d1a] text-white py-10 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6">
+
+            <div>
+                <h2 class="text-2xl font-extrabold">
+                    WENNY'S<span class="orange-text">.</span>
+                </h2>
+                <p class="text-gray-400 mt-3">
+                    Good food. Great moments.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap gap-6 text-gray-300">
+                <a href="index.html" class="hover:text-orange-400">Home</a>
+                <a href="menu.html" class="hover:text-orange-400">Menu</a>
+                <a href="about.html" class="hover:text-orange-400">About</a>
+                <a href="contact.html" class="hover:text-orange-400">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-sm">
+            © <span id="year"></span> WENNY'S FAST FOOD & RESTAURANT. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

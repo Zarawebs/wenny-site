@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | WENNY'S FAST FOOD</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #fffaf3;
+            color: #252525;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .menu-hero {
+            background: #252525;
+            color: white;
+            padding: 85px 20px;
+            text-align: center;
+        }
+
+        .menu-hero h1 {
+            font-size: clamp(38px, 6vw, 65px);
+            margin-bottom: 15px;
+        }
+
+        .menu-hero span {
+            color: #ff8a24;
+        }
+
+        .menu-section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 65px 20px;
+        }
+
+        .menu-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .menu-heading h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .menu-heading p {
+            color: #777;
+        }
+
+        .menu-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .category-btn {
+            border: 1px solid #e5dfd5;
+            background: white;
+            padding: 11px 22px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: #ff8a24;
+            color: white;
+            border-color: #ff8a24;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .food-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,.06);
+            transition: .3s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,.1);
+        }
+
+        .food-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .food-info {
+            padding: 18px;
+        }
+
+        .food-info h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .food-info p {
+            color: #777;
+            font-size: 13px;
+            min-height: 38px;
+        }
+
+        .food-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .food-price {
+            color: #ed7918;
+            font-weight: 800;
+            font-size: 17px;
+        }
+
+        .add-btn {
+            background: #252525;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 16px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .add-btn:hover {
+            background: #ff8a24;
+        }
+
+        .menu-cta {
+            background: #ff8a24;
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .menu-cta h2 {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .menu-cta a {
+            display: inline-block;
+            background: #252525;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 30px;
+            margin-top: 20px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        @media(max-width: 900px) {
+            .food-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 550px) {
+            .food-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-heading h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold">
+                WENNY'S<span class="text-orange-500">.</span>
+            </a>
+
+            <div class="flex flex-wrap gap-5 items-center text-sm font-bold">
+                <a href="index.html">Home</a>
+                <a href="menu.html" class="text-orange-500">Menu</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="order.html" class="bg-orange-500 text-white px-5 py-3 rounded-full">
+                    My Order
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="menu-hero">
+        <p class="text-orange-400 font-bold uppercase tracking-widest mb-3">
+            Fresh • Tasty • Delicious
+        </p>
+
+        <h1>Explore Our <span>Menu</span></h1>
+
+        <p class="text-gray-300">
+            Discover delicious meals prepared to satisfy every craving.
+        </p>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu-section">
+
+        <div class="menu-heading">
+            <p class="text-orange-500 font-bold uppercase tracking-widest">
+                What would you like?
+            </p>
+            <h2>Our Delicious Meals</h2>
+            <p>Choose your favourite and add it to your order.</p>
+        </div>
+
+        <!-- FILTER BUTTONS -->
+        <div class="menu-categories">
+            <button class="category-btn active" data-category="all">All Meals</button>
+            <button class="category-btn" data-category="rice">Rice Dishes</button>
+            <button class="category-btn" data-category="chicken">Chicken</button>
+            <button class="category-btn" data-category="fastfood">Fast Food</button>
+            <button class="category-btn" data-category="drinks">Drinks</button>
+        </div>
+
+        <!-- FOOD CARDS -->
+        <div class="food-grid">
+
+            <div class="food-card" data-category="rice">
+                <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=700&q=80" alt="Jollof Rice">
+                <div class="food-info">
+                    <h3>Special Jollof Rice</h3>
+                    <p>Delicious Nigerian-style jollof rice.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦4,500</span>
+                        <button class="add-btn" data-name="Special Jollof Rice" data-price="4500">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="rice">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=700&q=80" alt="Fried Rice">
+                <div class="food-info">
+                    <h3>Fried Rice & Chicken</h3>
+                    <p>Seasoned fried rice served with chicken.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦5,000</span>
+                        <button class="add-btn" data-name="Fried Rice & Chicken" data-price="5000">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="chicken">
+                <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=700&q=80" alt="Crispy Fried Chicken">
+                <div class="food-info">
+                    <h3>Crispy Fried Chicken</h3>
+                    <p>Golden, crunchy and delicious chicken.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦6,000</span>
+                        <button class="add-btn" data-name="Crispy Fried Chicken" data-price="6000">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="fastfood">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80" alt="Beef Burger">
+                <div class="food-info">
+                    <h3>Classic Beef Burger</h3>
+                    <p>Juicy burger with fresh vegetables.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦5,500</span>
+                        <button class="add-btn" data-name="Classic Beef Burger" data-price="5500">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="fastfood">
+                <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=700&q=80" alt="Chicken Shawarma">
+                <div class="food-info">
+                    <h3>Chicken Shawarma</h3>
+                    <p>Freshly prepared shawarma packed with flavour.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦4,000</span>
+                        <button class="add-btn" data-name="Chicken Shawarma" data-price="4000">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="fastfood">
+                <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=80" alt="French Fries">
+                <div class="food-info">
+                    <h3>Golden French Fries</h3>
+                    <p>Crispy golden fries, perfect for any meal.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦2,500</span>
+                        <button class="add-btn" data-name="Golden French Fries" data-price="2500">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="drinks">
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80" alt="Fresh Fruit Juice">
+                <div class="food-info">
+                    <h3>Fresh Fruit Juice</h3>
+                    <p>Refreshing fruit juice served chilled.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦2,500</span>
+                        <button class="add-btn" data-name="Fresh Fruit Juice" data-price="2500">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="drinks">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=700&q=80" alt="Cold Drink">
+                <div class="food-info">
+                    <h3>Refreshing Cold Drink</h3>
+                    <p>A chilled drink to complete your meal.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦1,500</span>
+                        <button class="add-btn" data-name="Refreshing Cold Drink" data-price="1500">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="menu-cta">
+        <h2>Ready to Enjoy Something Delicious?</h2>
+        <p>Choose your favourites and view your order.</p>
+        <a href="order.html">View My Order</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-950 text-white text-center py-7">
+        <p class="font-bold text-xl">WENNY'S FAST FOOD</p>
+        <p class="text-gray-400 text-sm mt-2">
+            Delicious meals. Wonderful moments.
+        </p>
+        <p class="text-gray-500 text-xs mt-4">
+            © <span id="year"></span> WENNY'S. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    <!-- MENU FILTER AND CART -->
+    <script>
+        // CATEGORY FILTERING
+        const categoryButtons = document.querySelectorAll(".category-btn");
+        const foodCards = document.querySelectorAll(".food-card");
+
+        categoryButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const category = this.getAttribute("data-category");
+
+                categoryButtons.forEach(btn => btn.classList.remove("active"));
+                this.classList.add("active");
+
+                foodCards.forEach(card => {
+                    if (category === "all" || card.dataset.category === category) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            });
+        });
+
+        // ADD TO CART
+        const addButtons = document.querySelectorAll(".add-btn");
+
+        addButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const name = this.dataset.name;
+                const price = Number(this.dataset.price);
+
+                let cart = [];
+
+                try {
+                    cart = JSON.parse(localStorage.getItem("wennyCart")) || [];
+                } catch (error) {
+                    cart = [];
+                }
+
+                const existingItem = cart.find(item => item.name === name);
+
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        name: name,
+                        price: price,
+                        quantity: 1
+                    });
+                }
+
+                localStorage.setItem("wennyCart", JSON.stringify(cart));
+
+                this.textContent = "Added ✓";
+
+                setTimeout(() => {
+                    this.textContent = "Add +";
+                }, 1000);
+            });
+        });
+    </script>
+
+</body>
+</html>
